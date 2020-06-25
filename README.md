@@ -6,7 +6,12 @@ Where the Customer can remove himself from the queue and it automatically Update
 When New Customer is added  in the list the Customer Id continue from the last Customer's ID.
 
 
-Project Is submitted Both Using Frameworks and Simple Code of python Without Frameworks.
+Project Is submitted by Both Using Frameworks and Simple Code of python Without Frameworks.
 
 Some Of the Screen Shot is been Added For Further Understanding.
+
+
+Question For the Answer asked in the Assignment.
+
+Question5--> Answer :Yes,I have worked in Web Based that is Flask for my college project of Creating a Automatic TimeTable Generator \nwhere Flask was used  , that is for back end used python and the front end (GUI) used which is HTML5.
 
