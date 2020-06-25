@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">   
+ <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+ <title>Assignment</title>
+</head>
+<body>
+    <div class="menuBar">
+    <div class="navBar">
+        <ul>
+            <li><a href="/">Home</a></li>
+          </ul>
+    </div>
+</div>
+
+    <div class="container">
+
+        <div class="inputsBox">
+            <form action="/generate-issues" method="GET">
+                <label class="lable-class" for="">Number if Issues</label>
+                <input class="input" type="number" name="total-issue" placeholder="Total Issues" required>
+                <button class="button" type="submit">Generate Issues</button>    
+            </form>
+            
+            <form action="/check-avaliablity" method="POST">
+                <button class="button" type="submit">Check Avalability</button>
+            </form>
+            
+        </div>
+        
+    </div>
+    
+    <div class="table-class">
+
+        {% if agent %}
+            
+        <table>
+            <thead>
+            <tr>
+                <th>Start</th>
+                <th>Resolved Status</th>
+                <th>Answer</th>
+                <th>Resloved</th>
+                <th>Abandoned</th>
+              </tr>
+            </thead>
+              {% for issue in agent.issues_assigned %}              
+              <tr>
+                <td>{{ issue.start_time }}</td>
+                <td>{{ issue.resolved_status }}</td>
+                <td>{{ issue.answer_time }}</td>
+                <td>{{ issue.resolved_time}}</td>
+                <td>{{ issue.abandoned_time }}</td>
+              </tr>
+              {% endfor %}
+          </table>
+          {% endif %}
+    </div>
+
+    <div class="avaliable-class">
+
+        {% if agent_avaliablity %}
+            {% if agent_avaliablity == True %}
+            <h1>Agent is <span style="color: green;">avaliable</span>  now !</h1>     
+            {% else %}
+            <h1><span style="color: red;">Agent is busy at the moment</span></h1>    
+            <h1>Agent will be  avaliable {{ agent_avaliablity }}!</h1>    
+            {% endif %}
+        {% endif %}
+
+    </div>
+    
+    
+      
+
+ </div>
+</body>
+</html>

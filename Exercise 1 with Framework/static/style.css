@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+/* scrolltable rules */
+table {
+  margin-top: 20px;
+  display: inline-block;
+  overflow: auto;
+}
+
+td, th {
+ border: 1px solid #dddddd;
+ text-align: left;
+ padding: 8px;
+}
+/* design */
+table {
+  border-collapse: collapse;
+  height: 300px;
+  width: auto;
+}
+tr:nth-child(even) {
+  background: #e0dede;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.container {
+  display: block;
+}
+
+ .inputsBox {
+  background-color: #00adb5;
+  margin: 10% auto;
+  padding: 20px;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  border: 2px solid;
+  box-shadow: 2px 2px 8px 2px black;
+}
+
+
+.button {
+ background-color: #393e46; /* Green */
+ border: none;
+ border-radius: 5px;;
+ color: white;
+ padding: 15px 32px;
+ margin: 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+}
+
+.input {
+ border: none;
+ border-radius: 5px;
+ padding: 15px 32px;
+ margin: 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+}
+
+.lable-class {
+ padding: 15px 32px;
+ margin: 5px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+ font-style: oblique;
+ font-weight: bold;
+}
+
+.table-class {
+ margin: 0 auto;
+ text-align: center;
+}
+
+
+.avaliable-class { 
+ margin: 0 auto;
+ text-align: center;
+}
